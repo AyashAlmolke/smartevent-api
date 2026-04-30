@@ -16,7 +16,8 @@ RUN composer install --no-dev --optimize-autoloader
 
 RUN chmod -R 777 storage bootstrap/cache
 
-
+# ✅ إنشاء APP_KEY جديد مباشرة في Dockerfile
+RUN php artisan key:generate --force
 
 EXPOSE 8000
 
