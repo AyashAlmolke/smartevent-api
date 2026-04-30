@@ -16,9 +16,7 @@ RUN composer install --no-dev --optimize-autoloader
 
 RUN chmod -R 777 storage bootstrap/cache
 
-# ✅ تنظيف الكاش قبل تشغيل الخادم
-RUN php artisan config:clear
-RUN php artisan cache:clear
+
 
 EXPOSE 8000
 
